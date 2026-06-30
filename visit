@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html lang="zh-HK" data-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>探索古埃及 — 香港故宮博物館導賞</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;600;700&family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root,[data-theme="light"]{
+  --text-xs:clamp(0.75rem,0.7rem + 0.25vw,0.875rem);
+  --text-sm:clamp(0.875rem,0.8rem + 0.35vw,1rem);
+  --text-base:clamp(1rem,0.95rem + 0.25vw,1.125rem);
+  --text-lg:clamp(1.125rem,1rem + 0.75vw,1.5rem);
+  --text-xl:clamp(1.5rem,1.2rem + 1.25vw,2.25rem);
+  --text-2xl:clamp(2rem,1.2rem + 2.5vw,3.5rem);
+  --text-3xl:clamp(2.5rem,1rem + 4vw,5rem);
+  --space-1:.25rem;--space-2:.5rem;--space-3:.75rem;--space-4:1rem;--space-5:1.25rem;
+  --space-6:1.5rem;--space-8:2rem;--space-10:2.5rem;--space-12:3rem;--space-16:4rem;--space-24:6rem;
+  --color-bg:#f5ede0;--color-surface:#faf4eb;--color-surface-2:#fffdf8;
+  --color-surface-offset:#ede0cc;--color-divider:#d4be9a;--color-border:#c8a87a;
+  --color-text:#2a1f0e;--color-text-muted:#6b5540;--color-text-faint:#a88a6a;
+  --color-text-inverse:#faf4eb;--color-primary:#1a4a7a;--color-primary-hover:#133a62;
+  --color-primary-highlight:#c8d8ec;--color-accent:#b8860b;--color-accent-bg:#fdf3cc;
+  --radius-sm:.375rem;--radius-md:.5rem;--radius-lg:.75rem;--radius-xl:1rem;--radius-full:9999px;
+  --transition:180ms cubic-bezier(0.16,1,0.3,1);
+  --shadow-sm:0 1px 2px oklch(0.2 0.04 60/0.08);
+  --shadow-md:0 4px 12px oklch(0.2 0.04 60/0.12);
+  --shadow-lg:0 12px 32px oklch(0.2 0.04 60/0.18);
+  --content:960px;
+  --font-display:'Noto Serif TC','Georgia',serif;
+  --font-body:'Noto Sans TC','Helvetica Neue',sans-serif;
+}
+[data-theme="dark"]{
+  --color-bg:#1a1208;--color-surface:#211910;--color-surface-2:#281f14;
+  --color-surface-offset:#1e1509;--color-divider:#3a2d1e;--color-border:#4a3822;
+  --color-text:#e8d8c0;--color-text-muted:#a08060;--color-text-faint:#6a5040;
+  --color-text-inverse:#1a1208;--color-primary:#6a9fd4;--color-primary-highlight:#1a2d44;
+  --color-accent:#d4a020;--color-accent-bg:#2a1f08;
+  --shadow-sm:0 1px 2px oklch(0 0 0/0.3);--shadow-md:0 4px 12px oklch(0 0 0/0.4);--shadow-lg:0 12px 32px oklch(0 0 0/0.5);
+}
+@media(prefers-color-scheme:dark){:root:not([data-theme]){
+  --color-bg:#1a1208;--color-surface:#211910;--color-surface-2:#281f14;
+  --color-surface-offset:#1e1509;--color-divider:#3a2d1e;--color-border:#4a3822;
+  --color-text:#e8d8c0;--color-text-muted:#a08060;--color-primary:#6a9fd4;
+  --color-primary-highlight:#1a2d44;--color-accent:#d4a020;--color-accent-bg:#2a1f08;
+}}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-font-smoothing:antialiased;scroll-behavior:smooth;scroll-padding-top:80px}
+body{min-height:100dvh;line-height:1.7;font-family:var(--font-body);font-size:var(--text-base);color:var(--color-text);background:var(--color-bg)}
+img{display:block;max-width:100%;height:auto}
+h1,h2,h3,h4{text-wrap:balance;line-height:1.2;font-family:var(--font-display)}
+p,li{text-wrap:pretty}
+.skip-link{position:absolute;top:-100px;left:var(--space-4);background:var(--color-primary);color:var(--color-text-inverse);padding:var(--space-2) var(--space-4);border-radius:var(--radius-md);font-size:var(--text-sm);z-index:999}
+.skip-link:focus{top:var(--space-4)}
+header{position:sticky;top:0;z-index:100;background:var(--color-surface);border-bottom:1px solid var(--color-border);box-shadow:var(--shadow-sm)}
+.header-inner{max-width:var(--content);margin:0 auto;padding:var(--space-3) var(--space-6);display:flex;align-items:center;justify-content:space-between;gap:var(--space-4)}
+.site-logo{display:flex;align-items:center;gap:var(--space-3);text-decoration:none}
+.site-logo-text{font-family:var(--font-display);font-size:var(--text-sm);font-weight:700;color:var(--color-text)}
+.site-logo-sub{font-size:var(--text-xs);color:var(--color-text-muted);display:block}
+button[data-theme-toggle]{width:40px;height:40px;display:flex;align-items:center;justify-content:center;border-radius:var(--radius-full);color:var(--color-text-muted);border:1px solid var(--color-border);background:var(--color-surface-2);cursor:pointer;transition:all var(--transition)}
+button[data-theme-toggle]:hover{color:var(--color-text);background:var(--color-surface-offset)}
+.hero{background:linear-gradient(in oklab 160deg,#2a1a06 0%,#1a3055 100%);color:#f5e8c8;padding:clamp(var(--space-16),10vw,var(--space-24)) var(--space-6);text-align:center;position:relative;overflow:hidden}
+.hero::before{content:'';position:absolute;inset:0;background:url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23c8a030' fill-opacity='0.06'%3E%3Cpath d='M30 0 L60 52 L0 52z'/%3E%3C/g%3E%3C/svg%3E") repeat;pointer-events:none}
+.hero-content{position:relative;max-width:700px;margin:0 auto}
+.hero-badge{display:inline-block;background:oklch(0.7 0.15 80/0.2);border:1px solid oklch(0.7 0.15 80/0.4);color:#e8d090;padding:var(--space-1) var(--space-4);border-radius:var(--radius-full);font-size:var(--text-xs);letter-spacing:.1em;text-transform:uppercase;margin-bottom:var(--space-4)}
+.hero h1{font-size:var(--text-3xl);color:#f5e8c8;margin-bottom:var(--space-4)}
+.hero-subtitle{font-size:var(--text-lg);color:#c8b89a;margin-bottom:var(--space-8);line-height:1.6}
+.hero-divider{width:80px;height:3px;margin:0 auto var(--space-8);background:linear-gradient(90deg,transparent,#c8a030,transparent)}
+.topic-nav{display:flex;flex-wrap:wrap;justify-content:center;gap:var(--space-2);max-width:700px;margin:0 auto}
+.topic-nav a{background:oklch(0.7 0.15 80/0.12);border:1px solid oklch(0.7 0.15 80/0.3);color:#e8d090;text-decoration:none;padding:var(--space-2) var(--space-4);border-radius:var(--radius-full);font-size:var(--text-xs);transition:all var(--transition)}
+.topic-nav a:hover{background:oklch(0.7 0.15 80/0.25);color:#fff}
+main{max-width:var(--content);margin:0 auto;padding:var(--space-12) var(--space-6)}
+.topic-section{margin-bottom:var(--space-16);border-radius:var(--radius-xl);background:var(--color-surface);border:1px solid var(--color-border);overflow:hidden;box-shadow:var(--shadow-md)}
+.topic-header{padding:var(--space-6) var(--space-8);background:linear-gradient(135deg,var(--color-surface-offset),var(--color-surface));border-bottom:1px solid var(--color-border);display:flex;align-items:center;gap:var(--space-4)}
+.topic-number{width:44px;height:44px;flex-shrink:0;background:var(--color-primary);color:var(--color-text-inverse);border-radius:var(--radius-full);display:flex;align-items:center;justify-content:center;font-family:var(--font-display);font-size:var(--text-sm);font-weight:700}
+.topic-header h2{font-size:var(--text-xl);color:var(--color-text)}
+.topic-body{padding:var(--space-6) var(--space-8)}
+.artifact{margin-bottom:var(--space-8);padding-bottom:var(--space-8);border-bottom:1px solid var(--color-divider)}
+.artifact:last-child{margin-bottom:0;padding-bottom:0;border-bottom:none}
+.artifact-layout{display:grid;grid-template-columns:1fr;gap:var(--space-6)}
+.artifact-layout.has-image{grid-template-columns:1fr 290px}
+@media(max-width:640px){.artifact-layout.has-image{grid-template-columns:1fr}.artifact-layout.has-image .artifact-images{order:-1}}
+.artifact h3{font-size:var(--text-lg);color:var(--color-text);margin-bottom:var(--space-4);display:flex;align-items:center;gap:var(--space-2)}
+.artifact h3::before{content:'';width:4px;height:1.2em;background:var(--color-accent);border-radius:2px;flex-shrink:0}
+.fact-block{background:var(--color-surface-2);border:1px solid var(--color-divider);border-radius:var(--radius-lg);padding:var(--space-4) var(--space-5);margin-bottom:var(--space-3)}
+.fact-label{font-size:var(--text-xs);font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--color-accent);margin-bottom:var(--space-1);display:block}
+.fact-block p,.fact-block div{font-size:var(--text-sm);color:var(--color-text);line-height:1.8}
+.en{font-size:.9em;color:var(--color-primary);background:var(--color-primary-highlight);padding:0 3px;border-radius:3px;font-style:normal}
+.artifact-images{display:flex;flex-direction:column;gap:var(--space-3)}
+.artifact-img{border-radius:var(--radius-lg);overflow:hidden;border:1px solid var(--color-border);box-shadow:var(--shadow-sm);background:var(--color-surface-offset)}
+.artifact-img img{width:100%;height:auto;display:block;object-fit:cover}
+.img-caption{font-size:var(--text-xs);color:var(--color-text-muted);padding:var(--space-2) var(--space-3);background:var(--color-surface-offset);text-align:center}
+.data-table{width:100%;border-collapse:collapse;margin:var(--space-4) 0;font-size:var(--text-sm)}
+.data-table th{background:var(--color-primary);color:var(--color-text-inverse);padding:var(--space-3) var(--space-4);text-align:left;font-family:var(--font-display)}
+.data-table td{padding:var(--space-3) var(--space-4);border-bottom:1px solid var(--color-divider)}
+.data-table tr:last-child td{border-bottom:none}
+.data-table tr:nth-child(even) td{background:var(--color-surface-offset)}
+.callout{background:var(--color-accent-bg);border:1px solid var(--color-accent);border-radius:var(--radius-lg);padding:var(--space-4) var(--space-5);margin:var(--space-4) 0;display:flex;gap:var(--space-3);align-items:flex-start}
+.callout-icon{font-size:1.4em;flex-shrink:0}
+.callout p{font-size:var(--text-sm);color:var(--color-text);line-height:1.7}
+.egg-section{margin:var(--space-8) 0 0;border-radius:var(--radius-xl);background:linear-gradient(135deg,#1a3055,#2a1a06);color:#f5e8c8;padding:var(--space-8);box-shadow:var(--shadow-lg);overflow:hidden;position:relative}
+.egg-section::before{content:"🥚";font-size:4rem;position:absolute;right:var(--space-8);top:var(--space-4);opacity:.15}
+.egg-section h2{color:#e8d090;font-size:var(--text-xl);margin-bottom:var(--space-4)}
+.egg-section p{color:#c8b89a;line-height:1.8;margin-bottom:var(--space-3)}
+footer{background:var(--color-surface-offset);border-top:1px solid var(--color-border);text-align:center;padding:var(--space-8) var(--space-6);color:var(--color-text-muted);font-size:var(--text-sm)}
+.fade-up{opacity:0;transform:translateY(20px);transition:opacity .5s ease,transform .5s ease}
+.fade-up.visible{opacity:1;transform:translateY(0)}
+a,button{transition:color var(--transition),background var(--transition),border-color var(--transition),box-shadow var(--transition)}
+:focus-visible{outline:2px solid var(--color-primary);outline-offset:3px;border-radius:var(--radius-sm)}
+@media(max-width:768px){.header-inner{padding:var(--space-3) var(--space-4)}.topic-header{padding:var(--space-4) var(--space-5)}.topic-body{padding:var(--space-5)}main{padding:var(--space-8) var(--space-4)}}
+</style>
+</head>
+<body>
+<a href="#main" class="skip-link">跳至主要內容</a>
+<header>
+  <div class="header-inner">
+    <a href="#" class="site-logo" aria-label="回到頁頂">
+      <svg width="36" height="36" viewBox="0 0 36 36" fill="none" aria-hidden="true">
+        <ellipse cx="18" cy="18" rx="16" ry="10" stroke="#b8860b" stroke-width="2"/>
+        <circle cx="18" cy="18" r="5" fill="#1a4a7a"/>
+        <circle cx="18" cy="18" r="2.5" fill="#b8860b"/>
+        <path d="M18 28 Q22 32 26 30" stroke="#b8860b" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+        <path d="M18 28 Q14 32 10 30" stroke="#b8860b" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+        <path d="M2 18 Q10 10 18 10 Q26 10 34 18" stroke="#b8860b" stroke-width="1.5" fill="none"/>
+      </svg>
+      <div>
+        <span class="site-logo-text">探索古埃及</span>
+        <span class="site-logo-sub">香港故宮博物館導賞</span>
+      </div>
+    </a>
+    <button data-theme-toggle aria-label="切換深色模式">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+    </button>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="hero-content">
+    <div class="hero-badge">🏛️ 中一歷史導賞</div>
+    <h1>探索古埃及的秘密</h1>
+    <p class="hero-subtitle">隨着香港故宮博物館的展覽，一同穿越時空，認識五千年前古埃及人的生活、信仰與死後世界！</p>
+    <div class="hero-divider"></div>
+    <nav class="topic-nav" aria-label="主題導航">
+      <a href="#t1">💄 精緻生活</a>
+      <a href="#t2">👑 法老王后</a>
+      <a href="#t3">⚔️ 權力宗教</a>
+      <a href="#t4">⚰️ 死後世界</a>
+      <a href="#t5">🏺 木乃伊技術</a>
+      <a href="#t6">🐱 神聖動物</a>
+      <a href="#t7">🚪 靈魂之門</a>
+      <a href="#t8">🎨 藝術音樂</a>
+      <a href="#t9">🟢 重生神話</a>
+      <a href="#egg">🥚 彩蛋</a>
+    </nav>
+  </div>
+</section>
+
+<main id="main">
+
+<section class="topic-section fade-up" id="t1">
+  <div class="topic-header"><div class="topic-number">一</div><h2>古埃及人的精緻生活（愛美與享樂）</h2></div>
+  <div class="topic-body">
+
+    <div class="artifact">
+      <div class="artifact-layout has-image">
+        <div>
+          <h3>化妝品盒子（眼線與眼影）</h3>
+          <div class="fact-block"><span class="fact-label">📖 背後故事</span>
+            <p>古埃及人非常愛美，但畫眼線不只是為了好看，更有<strong>實際用途</strong>：眼線可以吸收陽光，減少強烈紫外線對眼睛的刺激（類似現代美式足球員在眼底塗黑）。</p></div>
+          <div class="fact-block"><span class="fact-label">🙏 宗教意義</span>
+            <p>具有辟邪和宗教庇佑（<em class="en">religious protection</em>）的信念。</p></div>
+        </div>
+        <div class="artifact-images">
+          <div class="artifact-img">
+            <img src="https://ppl-ai-code-interpreter-files.s3.amazonaws.com/web/direct-files/456857ef1876cd45c34e6033f8b819cd/352736ec-e277-43e8-9c20-4a16aee0e5f6/e8c5109b.png" alt="古埃及化妝品文物：鏡子與眼線用具" width="280" loading="lazy">
+            <div class="img-caption">展覽文物：古埃及鏡子與化妝用具</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="artifact">
+      <div class="artifact-layout has-image">
+        <div>
+          <h3>鏡子（生命之符 <em class="en">Ankh</em> 與女神）</h3>
+          <div class="fact-block"><span class="fact-label">📖 背後故事</span>
+            <p>在古埃及語中，「鏡子」與代表生命的「<em class="en">Ankh（生命之符）</em>」發音相同。鏡子手柄經常雕刻成 <em class="en">Hathor（哈索爾）</em>女神。</p></div>
+          <div class="fact-block"><span class="fact-label">⭐ 女神小知識</span>
+            <p><em class="en">Hathor</em> 是愛、美麗、音樂與舞蹈（<em class="en">love, beauty, music and dance</em>）的女神，特徵是擁有一對小牛耳。</p></div>
+        </div>
+        <div class="artifact-images">
+          <div class="artifact-img">
+            <img src="https://ppl-ai-code-interpreter-files.s3.amazonaws.com/web/direct-files/456857ef1876cd45c34e6033f8b819cd/352736ec-e277-43e8-9c20-4a16aee0e5f6/830830b9.png" alt="生命之符Ankh圖示" width="280" loading="lazy">
+            <div class="img-caption">生命之符 Ankh — 古埃及的生命象徵</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="artifact">
+      <div class="artifact-layout has-image">
+        <div>
+          <h3><em class="en">Sistrum</em>（叉鈴／樂器）</h3>
+          <div class="fact-block"><span class="fact-label">📖 背後故事</span>
+            <p>真正的打擊樂器（<em class="en">percussion instrument</em>）文物，在祭神儀式（<em class="en">religious ritual</em>）和遊行時用來打拍子。</p></div>
+          <div class="fact-block"><span class="fact-label">🔍 設計細節</span>
+            <p>同樣刻有 <em class="en">Hathor</em> 女神頭像，上面帶有標誌性的小牛耳，因為所有享樂與藝術都歸她管。</p></div>
+        </div>
+        <div class="artifact-images">
+          <div class="artifact-img">
+            <img src="https://ppl-ai-code-interpreter-files.s3.amazonaws.com/web/direct-files/456857ef1876cd45c34e6033f8b819cd/352736ec-e277-43e8-9c20-4a16aee0e5f6/c79a1d5c.png" alt="古埃及Sistrum叉鈴樂器" width="280" loading="lazy">
+            <div class="img-caption">展覽文物：Sistrum 叉鈴</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="artifact">
+      <div class="artifact-layout has-image">
+        <div>
+          <h3>廁所板</h3>
+          <div class="fact-block"><span class="fact-label">💡 趣味小知識</span>
+            <p>這件文物讓我們了解古埃及人的日常生活起居（<em class="en">daily life</em>）和宮廷衛生習慣，原來古代人一樣有衛生設施（<em class="en">sanitation facilities</em>）！</p></div>
+        </div>
+        <div class="artifact-images">
+          <div class="artifact-img">
+            <img src="https://ppl-ai-code-interpreter-files.s3.amazonaws.com/web/direct-files/456857ef1876cd45c34e6033f8b819cd/352736ec-e277-43e8-9c20-4a16aee0e5f6/7a3a7c15.png" alt="古埃及廁所板與涼鞋文物" width="280" loading="lazy">
+            <div class="img-caption">展覽文物：廁所板與涼鞋</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="topic-section fade-up" id="t2">
+  <div class="topic-header"><div class="topic-number">二</div><h2>第一代 KOL 法老與平民王后</h2></div>
+  <div class="topic-body">
+
+    <div class="artifact">
+      <div class="artifact-layout has-image">
+        <div>
+          <h3>阿蒙霍特普三世（<em class="en">Amenhotep III</em>）的婚姻聖甲蟲（<em class="en">Marriage Scarab</em>）</h3>
+          <div class="fact-block"><span class="fact-label">👑 法老背景</span>
+            <p>圖坦卡門（<em class="en">Tutankhamun</em>）的爺爺。他在位時國力鼎盛，作風國際化，娶了許多外國公主（<em class="en">foreign princesses</em>）。</p></div>
+          <div class="fact-block"><span class="fact-label">😎 「霸道總裁」行為</span>
+            <p>雖然有很多小妾，但法老只有一個正室。他為了向全國宣告自己娶了<strong>非王室貴族</strong>出身的泰伊（<em class="en">Tiye</em>）為大老婆，特別製作了幾十到上百隻「婚姻聖甲蟲」，在底部刻上公告（<em class="en">announcement</em>）到處派發。</p></div>
+          <div class="callout">
+            <span class="callout-icon">🐦</span>
+            <p><strong>趣味比較：</strong>他堪稱「第一代 KOL（<em class="en">Key Opinion Leader，關鍵意見領袖</em>）」！在沒有網路的年代，他利用聖甲蟲當作 Twitter / X 發文，引領公眾輿論（<em class="en">public opinion</em>）。共有五款著名聖甲蟲流傳至今。</p>
+          </div>
+        </div>
+        <div class="artifact-images">
+          <div class="artifact-img">
+            <img src="https://ppl-ai-code-interpreter-files.s3.amazonaws.com/web/direct-files/456857ef1876cd45c34e6033f8b819cd/352736ec-e277-43e8-9c20-4a16aee0e5f6/a4b9ac3d.png" alt="阿蒙霍特普三世的婚姻聖甲蟲文物" width="280" loading="lazy">
+            <div class="img-caption">展覽文物：婚姻聖甲蟲 Marriage Scarab</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="artifact">
+      <div class="artifact-layout has-image">
+        <div>
+          <h3>泰伊王后（<em class="en">Queen Tiye</em>）像</h3>
+          <div class="fact-block"><span class="fact-label">🏛️ 文物特徵</span>
+            <p>圖坦卡門的奶奶，其木乃伊（<em class="en">mummy</em>）至今仍保留着一頭漂亮的秀髮！</p></div>
+          <div class="fact-block"><span class="fact-label">📜 歷史地位</span>
+            <p>深受法老寵愛與尊重，名字頻繁出現在國家公告中。法老甚至為她建造了一個人工湖（<em class="en">artificial lake</em>）和華麗的遊船供她遊樂。</p></div>
+        </div>
+        <div class="artifact-images">
+          <div class="artifact-img">
+            <img src="https://ppl-ai-code-interpreter-files.s3.amazonaws.com/web/direct-files/456857ef1876cd45c34e6033f8b819cd/352736ec-e277-43e8-9c20-4a16aee0e5f6/5570bf93.png" alt="泰伊王后石像" width="280" loading="lazy">
+            <div class="img-caption">展覽文物：泰伊王后像 Queen Tiye</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="topic-section fade-up" id="t3">
+  <div class="topic-header"><div class="topic-number">三</div><h2>權力爭奪與顛覆傳統的宗教改革</h2></div>
+  <div class="topic-body">
+
+    <div class="artifact">
+      <div class="artifact-layout has-image">
+        <div>
+          <h3>圖坦卡門巨像（被「盜用（<em class="en">usurped</em>）」的石像）</h3>
+          <div class="fact-block"><span class="fact-label">👀 觀賞亮點</span>
+            <p>石像腰間插着鷹頭匕首（<em class="en">falcon-headed dagger</em>）。仔細看腰間的「王名框（<em class="en">cartouche</em>）」（放皇帝名字的橢圓形框），上面的名字不是圖坦卡門，而是後來的將軍法老 <em class="en">Horemheb（霍朗赫布）</em>。</p></div>
+          <div class="fact-block"><span class="fact-label">🎭 歷史內幕</span>
+            <p>圖坦卡門暴斃（<em class="en">sudden death</em>）後，繼任的 <em class="en">Ay（阿伊）</em>年老且在位短。三年後 <em class="en">Horemheb</em> 將軍奪權，殘忍地剷去了前任們的名字，改刻自己的名字，直接「回收」圖坦卡門的年輕巨像據為己有。</p></div>
+        </div>
+        <div class="artifact-images">
+          <div class="artifact-img">
+            <img src="https://ppl-ai-code-interpreter-files.s3.amazonaws.com/web/direct-files/456857ef1876cd45c34e6033f8b819cd/352736ec-e277-43e8-9c20-4a16aee0e5f6/5296d59c.png" alt="圖坦卡門/霍朗赫布巨像" width="280" loading="lazy">
+            <div class="img-caption">展覽文物：被盜名的圖坦卡門巨像</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="artifact">
+      <div class="artifact-layout has-image">
+        <div>
+          <h3>阿肯那頓巨像（<em class="en">Akhenaten</em>，圖坦卡門的爸爸）</h3>
+          <div class="fact-block"><span class="fact-label">☀️ 宗教改革</span>
+            <p>他篤信太陽光輝之神「阿頓（<em class="en">Aten</em>）」，推行激進的獨尊一神教（<em class="en">monotheism</em>），甚至因沉迷宗教而荒廢政事、不理外族入侵（<em class="en">foreign invasion</em>）。</p></div>
+          <div class="fact-block"><span class="fact-label">🎨 藝術風格（<em class="en">Amarna Period</em>）</span>
+            <p>由於他遷都至 <em class="en">Amarna</em>，這時期的藝術變得畸形且抽象——人像頭部很長、腰極幼、卻有大肚腩和肥大臀部。</p></div>
+          <div class="fact-block"><span class="fact-label">🔬 身形謎團</span>
+            <p>一說是近親通婚（<em class="en">inbreeding</em>）導致的遺傳病（<em class="en">genetic disease</em>）；另一說是法老想效仿代表尼羅河之神的「無性別／亦男亦女」神聖形象。</p></div>
+        </div>
+        <div class="artifact-images">
+          <div class="artifact-img">
+            <img src="https://ppl-ai-code-interpreter-files.s3.amazonaws.com/web/direct-files/456857ef1876cd45c34e6033f8b819cd/352736ec-e277-43e8-9c20-4a16aee0e5f6/1109b0ef.png" alt="阿肯那頓法老巨像" width="280" loading="lazy">
+            <div class="img-caption">展覽文物：阿肯那頓法老巨像</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="artifact">
+      <div class="artifact-layout">
+        <div>
+          <h3>阿肯那頓祭祀石板（<em class="en">Offering Stele</em>）</h3>
+          <div class="fact-block"><span class="fact-label">📜 畫面內容</span>
+            <p>教科書級文物。畫面中巨型的阿肯那頓法老正在帶領大老婆 <em class="en">Nefertiti（納芙蒂蒂）</em>敬拜阿頓神（形象為太陽散發光芒（<em class="en">rays of the sun</em>），惠澤人民）。</p></div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="topic-section fade-up" id="t4">
+  <div class="topic-header"><div class="topic-number">四</div><h2>古埃及人的死後世界（陰間打工仔）</h2></div>
+  <div class="topic-body">
+
+    <div class="artifact">
+      <div class="artifact-layout">
+        <div>
+          <h3>尤亞與圖亞的墓葬（<em class="en">Yuya &amp; Thuya</em>）</h3>
+          <div class="fact-block"><span class="fact-label">👨‍👩‍👧 人物背景</span>
+            <p>他們是平民王后泰伊（<em class="en">Queen Tiye</em>）的父母。因為女兒嫁入皇室而「雞犬升天」，死後獲得了極其精美完整的皇室級墓室（<em class="en">royal tomb</em>）與陪葬品（<em class="en">burial goods</em>）。</p></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="artifact">
+      <div class="artifact-layout has-image">
+        <div>
+          <h3><em class="en">Ushabti</em>（巫沙布提／答應公仔）</h3>
+          <div class="fact-block"><span class="fact-label">💡 核心概念</span>
+            <p>類似中國傳統的紙紮公仔，用來在死後世界（<em class="en">afterlife</em>）伺候主人。</p></div>
+          <div class="fact-block"><span class="fact-label">😄 有趣設定</span>
+            <p>古埃及人相信死後會復活（<em class="en">resurrection</em>），但復活後在陰間仍然要勞動（例如把沙從西方搬到東方）。為了不幹苦活，就要靠 <em class="en">Ushabti</em> 公仔代勞。公仔上刻有咒語（<em class="en">spell</em>），當主人點名時，它必須回答「<strong>我在（<em class="en">I am here</em>）</strong>」—— 這正是 <em class="en">Ushabti</em> 這個詞的意思。</p></div>
+        </div>
+        <div class="artifact-images">
+          <div class="artifact-img">
+            <img src="https://ppl-ai-code-interpreter-files.s3.amazonaws.com/web/direct-files/456857ef1876cd45c34e6033f8b819cd/352736ec-e277-43e8-9c20-4a16aee0e5f6/f1f119c6.png" alt="古埃及Ushabti答應公仔" width="280" loading="lazy">
+            <div class="img-caption">展覽文物：Yuya 的 Ushabti 公仔</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="artifact">
+      <div class="artifact-layout has-image">
+        <div>
+          <h3>枕頭（必備陪葬品 <em class="en">Headrest</em>）</h3>
+          <div class="fact-block"><span class="fact-label">🌙 宗教含意</span>
+            <p>埃及人認為睡覺和死亡很像。每天睡覺都能醒來，因此他們希望死後在另一個世界也能順利「醒來」，枕頭就成為了靈魂（<em class="en">soul</em>）覺醒必不可少的法器（<em class="en">magical object</em>）。</p></div>
+        </div>
+        <div class="artifact-images">
+          <div class="artifact-img">
+            <img src="https://ppl-ai-code-interpreter-files.s3.amazonaws.com/web/direct-files/456857ef1876cd45c34e6033f8b819cd/352736ec-e277-43e8-9c20-4a16aee0e5f6/09fc3144.png" alt="古埃及陪葬枕頭文物" width="280" loading="lazy">
+            <div class="img-caption">展覽文物：古埃及枕頭 Headrest</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="topic-section fade-up" id="t5">
+  <div class="topic-header"><div class="topic-number">五</div><h2>木乃伊防腐技術與內臟守護神</h2></div>
+  <div class="topic-body">
+    <p style="color:var(--color-text-muted);margin-bottom:var(--space-6);font-size:var(--text-sm);">古埃及人為了在死後世界保持身體完整（<em class="en">bodily integrity</em>），發明了許多「防腐黑科技（<em class="en">mummification technology</em>）」。</p>
+
+    <div class="artifact">
+      <div class="artifact-layout has-image">
+        <div>
+          <h3>黃金手指套、腳趾套（<em class="en">Gold Finger and Toe Stalls</em>）</h3>
+          <div class="fact-block"><span class="fact-label">📖 背後故事</span>
+            <p>在「新王國時期（<em class="en">New Kingdom Period</em>）」人們變得更追求完美。因為做木乃伊的脫水乾燥（<em class="en">dehydration</em>）過程中，死者的手指和腳趾很容易脫落，便加了黃金套來保護，確保去到死後世界時「身體完整（<em class="en">complete body</em>）」。</p></div>
+        </div>
+        <div class="artifact-images">
+          <div class="artifact-img">
+            <img src="https://ppl-ai-code-interpreter-files.s3.amazonaws.com/web/direct-files/456857ef1876cd45c34e6033f8b819cd/352736ec-e277-43e8-9c20-4a16aee0e5f6/2d37dec6.png" alt="古埃及黃金手指套腳趾套" width="280" loading="lazy">
+            <div class="img-caption">展覽文物：黃金手指套 Gold Finger Stalls</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="artifact">
+      <div class="artifact-layout has-image">
+        <div>
+          <h3>卡諾卜罐（<em class="en">Canopic Jars</em>／內臟罐）</h3>
+          <div class="fact-block"><span class="fact-label">🔬 防腐原理</span>
+            <p>埃及人發現如果內臟（<em class="en">organs</em>）留在屍體裡，防腐（<em class="en">mummification</em>）會做不好，所以必須移除並分開保存。</p></div>
+          <div class="fact-block"><span class="fact-label">🦅 荷魯斯四子（守護神）</span>
+            <p>四個罐子的蓋子演變成荷魯斯（<em class="en">Horus</em>）的四個兒子，分別守護不同的內臟：</p>
+            <table class="data-table" style="margin-top:var(--space-3)">
+              <thead><tr><th>罐蓋動物形象</th><th>守護的內臟</th><th>英文名稱</th></tr></thead>
+              <tbody>
+                <tr><td>人頭</td><td>肝 Liver</td><td>Imsety</td></tr>
+                <tr><td>狒狒頭</td><td>肺 Lungs</td><td>Hapi</td></tr>
+                <tr><td>豺狼頭</td><td>胃 Stomach</td><td>Duamutef</td></tr>
+                <tr><td>獵鷹頭</td><td>腸 Intestines</td><td>Qebehsenuef</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div class="artifact-images">
+          <div class="artifact-img">
+            <img src="https://ppl-ai-code-interpreter-files.s3.amazonaws.com/web/direct-files/456857ef1876cd45c34e6033f8b819cd/352736ec-e277-43e8-9c20-4a16aee0e5f6/b312cd7b.png" alt="古埃及卡諾卜罐內臟罐" width="280" loading="lazy">
+            <div class="img-caption">展覽文物：卡諾卜罐 Canopic Jars</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="artifact">
+      <div class="artifact-layout">
+        <div>
+          <h3>為什麼「豺狼（<em class="en">Jackal</em>）」在死亡神話中無處不在？</h3>
+          <div class="callout">
+            <span class="callout-icon">🔍</span>
+            <p>除了守護胃的荷魯斯之子，死神「阿努比斯（<em class="en">Anubis</em>）」和開路之神「韋普瓦韋特（<em class="en">Wepwawet</em>）」都是豺狼形象。<strong>科學解釋：</strong>豺狼在自然界中專吃腐肉（<em class="en">carrion</em>），古埃及人因此認為豺狼神最適合主管「處理屍體、防腐（<em class="en">embalming</em>）」這件事！</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="topic-section fade-up" id="t6">
+  <div class="topic-header"><div class="topic-number">六</div><h2>神聖動物與信仰（貓與河馬）</h2></div>
+  <div class="topic-body">
+    <p style="color:var(--color-text-muted);margin-bottom:var(--space-6);font-size:var(--text-sm);">這次展覽沒有人體木乃伊，但有動物木乃伊（<em class="en">animal mummies</em>）和精美的動物雕像。</p>
+
+    <div class="artifact">
+      <div class="artifact-layout has-image">
+        <div>
+          <h3>彩釉陶河馬（<em class="en">Faience Hippopotamus</em>）</h3>
+          <div class="fact-block"><span class="fact-label">😱 敬畏與害怕</span>
+            <p>河馬（<em class="en">hippopotamus</em>）和鱷魚（<em class="en">crocodile</em>）常在尼羅河（<em class="en">Nile River</em>）出沒，象徵着不可控的氾濫（<em class="en">flood</em>）力量。相傳<strong>第一個統一上下埃及的法老王就是被河馬殺死的</strong>！</p></div>
+          <div class="fact-block"><span class="fact-label">⚔️ 法老的復仇</span>
+            <p>為了替先祖報仇，法老會帶手下獵殺河馬，這演變成一種宮廷祭典儀式（<em class="en">royal ritual</em>）。</p></div>
+          <div class="fact-block"><span class="fact-label">✨ 工藝亮點</span>
+            <p>它是用 <em class="en">Faience（彩釉陶）</em>做成的，這在古代是陶瓷界的「黑科技」，顏色鮮艷高級（<em class="en">vibrant and luxurious</em>）。</p></div>
+        </div>
+        <div class="artifact-images">
+          <div class="artifact-img">
+            <img src="https://ppl-ai-code-interpreter-files.s3.amazonaws.com/web/direct-files/456857ef1876cd45c34e6033f8b819cd/352736ec-e277-43e8-9c20-4a16aee0e5f6/6db2733e.png" alt="古埃及藍色彩釉陶河馬" width="280" loading="lazy">
+            <div class="img-caption">展覽文物：藍色 Faience 彩釉陶河馬</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="artifact">
+      <div class="artifact-layout has-image">
+        <div>
+          <h3>貓木乃伊（殘忍的祭品 <em class="en">Cat Mummies</em>）</h3>
+          <div class="fact-block"><span class="fact-label">🐱 製作原因</span>
+            <p>一是作為寵物（<em class="en">pet</em>）陪伴主人去永生世界；二（最常見）是作為祭品（<em class="en">offering</em>）奉獻給貓神（<em class="en">cat goddess Bastet</em>）。</p></div>
+          <div class="fact-block"><span class="fact-label">😨 歷史真相</span>
+            <p>考古（<em class="en">archaeological</em>）檢查發現，很多貓木乃伊死得很慘（被扭斷頸或打破頭骨）。甚至有古埃及的「不良商人」，用布包成貓的形狀，裡面其實甚麼都沒有——<strong>假祭品（<em class="en">fake offerings</em>）！</strong></p></div>
+        </div>
+        <div class="artifact-images">
+          <div class="artifact-img">
+            <img src="https://ppl-ai-code-interpreter-files.s3.amazonaws.com/web/direct-files/456857ef1876cd45c34e6033f8b819cd/352736ec-e277-43e8-9c20-4a16aee0e5f6/a7860f51.png" alt="古埃及貓木乃伊" width="280" loading="lazy">
+            <div class="img-caption">展覽文物：貓木乃伊 Cat Mummies</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="topic-section fade-up" id="t7">
+  <div class="topic-header"><div class="topic-number">七</div><h2>死後世界的「任意門」與階級</h2></div>
+  <div class="topic-body">
+    <div class="artifact">
+      <div class="artifact-layout has-image">
+        <div>
+          <h3>假門（<em class="en">False Door</em>）— 靈魂的任意門</h3>
+          <div class="fact-block"><span class="fact-label">🚪 靈魂的通道</span>
+            <p>假門是給死者靈魂的一部分——「巴（<em class="en">Ba</em>，形象為人頭鳥身）」自由出入死後世界（<em class="en">afterlife</em>）與陽間（<em class="en">living world</em>）的通道。</p></div>
+          <div class="fact-block"><span class="fact-label">🔍 設計細節</span>
+            <div>▸ 假門正中上方刻有圓柱形的「卷軸（<em class="en">scroll</em>）」，是模仿人間用來防風沙的簾子。<br>
+            ▸ 上面刻有典型銘文「<em class="en">Htp Di Nsw</em>」（國王給予的供奉），代表透過法老的力量向神靈祈求。<br>
+            ▸ 銘文還列出了奉獻給死者的供品（<em class="en">offerings</em>）清單（牛、雞、衣服、香料）。</div></div>
+          <div class="fact-block"><span class="fact-label">👔 高級階層的象徵</span>
+            <p>墓主人將自己的形象對稱地重複了四次。他穿著一條三角形的裙子（<em class="en">triangular kilt</em>），在古埃及這代表「高級管理階層（<em class="en">elite class</em>）」，等同現代人穿西裝，暗示他不需要參與體力勞動（<em class="en">manual labour</em>）。</p></div>
+        </div>
+        <div class="artifact-images">
+          <div class="artifact-img">
+            <img src="https://ppl-ai-code-interpreter-files.s3.amazonaws.com/web/direct-files/456857ef1876cd45c34e6033f8b819cd/352736ec-e277-43e8-9c20-4a16aee0e5f6/92a81e89.png" alt="古埃及假門石碑" width="280" loading="lazy">
+            <div class="img-caption">展覽文物：假門 False Door</div>
+          </div>
+          <div class="artifact-img">
+            <img src="https://ppl-ai-code-interpreter-files.s3.amazonaws.com/web/direct-files/456857ef1876cd45c34e6033f8b819cd/352736ec-e277-43e8-9c20-4a16aee0e5f6/ee5c453d.png" alt="假門上的彩色浮雕人像" width="280" loading="lazy">
+            <div class="img-caption">假門上的彩色浮雕 Coloured Relief</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="topic-section fade-up" id="t8">
+  <div class="topic-header"><div class="topic-number">八</div><h2>古代畫家與音樂（日常生活延伸）</h2></div>
+  <div class="topic-body">
+
+    <div class="artifact">
+      <div class="artifact-layout has-image">
+        <div>
+          <h3>畫家的調色板（<em class="en">Artist's Palette</em>）</h3>
+          <div class="fact-block"><span class="fact-label">🎨 如何分辨文官與畫家？</span>
+            <p>普通書記官（<em class="en">scribe</em>）寫字通常只用「紅、黑」兩種墨水（用蘆葦筆（<em class="en">reed pen</em>）書寫）。如果調色板（<em class="en">palette</em>）上有五、六種顏色，就一定是畫家的調色板。顏料（<em class="en">pigment</em>）是用礦石（<em class="en">minerals</em>）混合動物油脂或膠做成的。</p></div>
+        </div>
+        <div class="artifact-images">
+          <div class="artifact-img">
+            <img src="https://ppl-ai-code-interpreter-files.s3.amazonaws.com/web/direct-files/456857ef1876cd45c34e6033f8b819cd/352736ec-e277-43e8-9c20-4a16aee0e5f6/0ce8db2e.png" alt="古埃及畫家調色板文物" width="280" loading="lazy">
+            <div class="img-caption">展覽文物：畫家的調色板 Artist's Palette</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="artifact">
+      <div class="artifact-layout has-image">
+        <div>
+          <h3>手形拍手器（<em class="en">Clappers</em>，樂器）</h3>
+          <div class="fact-block"><span class="fact-label">🎵 用途</span>
+            <p>古埃及人在舞蹈儀式（<em class="en">dance ritual</em>）中用來打拍子，為了不拍痛雙手，用牛骨（<em class="en">cattle bone</em>）或木頭做成一對「手掌形狀」的敲擊器（<em class="en">percussion instrument</em>）。</p></div>
+        </div>
+        <div class="artifact-images">
+          <div class="artifact-img">
+            <img src="https://ppl-ai-code-interpreter-files.s3.amazonaws.com/web/direct-files/456857ef1876cd45c34e6033f8b819cd/352736ec-e277-43e8-9c20-4a16aee0e5f6/d9d03c22.png" alt="古埃及手形拍手器樂器" width="280" loading="lazy">
+            <div class="img-caption">展覽文物：手形拍手器 Clappers</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="topic-section fade-up" id="t9">
+  <div class="topic-header"><div class="topic-number">九</div><h2>晚期綠色棺木與重生神話</h2></div>
+  <div class="topic-body">
+    <div class="artifact">
+      <div class="artifact-layout has-image">
+        <div>
+          <h3>薩卡拉（<em class="en">Saqqara</em>）出土的人形棺木</h3>
+          <div class="fact-block"><span class="fact-label">📍 地點小知識</span>
+            <p>薩卡拉（<em class="en">Saqqara</em>）與基薩（<em class="en">Giza</em>）、達舒爾（<em class="en">Dahshur</em>）一樣，都是下埃及（<em class="en">Lower Egypt</em>）非常重要的皇家墓地（<em class="en">royal necropolis</em>）。</p></div>
+          <div class="fact-block"><span class="fact-label">💚 為什麼棺木面部是綠色的？</span>
+            <div>▸ <em class="en">Osiris（奧西里斯）</em>被親弟弟 <em class="en">Seth（塞特）</em>因嫉妒而謀殺並碎屍，最後在妻子 <em class="en">Isis（伊西斯）</em>和小妹 <em class="en">Nephthys（奈芙蒂斯）</em>的協助下復活（<em class="en">resurrected</em>），成為冥界之神（<em class="en">god of the underworld</em>）。<br>
+            ▸ <strong>綠色代表重生（<em class="en">rebirth</em>）與植物發芽（<em class="en">germination</em>）。</strong>將棺木塗成綠色，是希望死者能像奧西里斯一樣復活。</div></div>
+          <div class="fact-block"><span class="fact-label">♾️ 永恆守護（<em class="en">Shen Ring</em>）</span>
+            <p>棺木旁刻有伊西斯和奈芙蒂斯兩姐妹，她們手持 <em class="en">Shen Ring（永恆之圈）</em>，象徵給予死者永恆（<em class="en">eternal</em>）的守護。</p></div>
+        </div>
+        <div class="artifact-images">
+          <div class="artifact-img">
+            <img src="https://ppl-ai-code-interpreter-files.s3.amazonaws.com/web/direct-files/456857ef1876cd45c34e6033f8b819cd/352736ec-e277-43e8-9c20-4a16aee0e5f6/8a8ed076.png" alt="古埃及綠色人形棺木" width="280" loading="lazy">
+            <div class="img-caption">展覽文物：薩卡拉出土的綠色棺木</div>
+          </div>
+          <div class="artifact-img">
+            <img src="https://ppl-ai-code-interpreter-files.s3.amazonaws.com/web/direct-files/456857ef1876cd45c34e6033f8b819cd/352736ec-e277-43e8-9c20-4a16aee0e5f6/1b204b14.png" alt="棺木上的Isis和Nephthys" width="280" loading="lazy">
+            <div class="img-caption">伊西斯 (Isis) 和奈芙蒂斯 (Nephthys)</div>
+          </div>
+          
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="egg-section fade-up" id="egg">
+  <h2>🥚 導賞小彩蛋：故宮門口的古埃及文！</h2>
+  <p>原來香港故宮博物館門口刻有古埃及象形文字（<em style="color:#e8d090;">hieroglyphics</em>）！</p>
+  <p>▸ 開頭的字是 <strong style="color:#e8d090;">Kemet</strong>（古埃及的名稱，意思是「黑色的土地（<em style="color:#e8d090;">Black Land</em>）」）。</p>
+  <p>▸ 後面連着一串看起來不太通順的古埃及符號，其實是當代設計師的冷幽默——它是用古埃及文拼音硬譯出來的 <strong style="color:#e8d090;">"Hong Kong Palace Museum"（香港故宮博物館）</strong>音譯！</p>
+  <div style="margin-top:var(--space-6);">
+    <div class="artifact-img" style="max-width:520px;border-radius:var(--radius-lg);overflow:hidden;">
+      <img src="https://ppl-ai-code-interpreter-files.s3.amazonaws.com/web/direct-files/456857ef1876cd45c34e6033f8b819cd/352736ec-e277-43e8-9c20-4a16aee0e5f6/f91e77c4.png" alt="香港故宮博物館門口的古埃及象形文字" width="520" loading="lazy">
+      <div class="img-caption" style="background:rgba(0,0,0,0.35);color:#c8b89a;">香港故宮博物館 Hong Kong Palace Museum 門口的古埃及文</div>
+    </div>
+  </div>
+</section>
+
+</main>
+<footer>
+  <p>🏛️ 內容來自香港故宮博物館古埃及展覽導賞</p>
+  <p style="margin-top:var(--space-2);">© 中一歷史教學資源 · Ancient Egypt Visit</p>
+</footer>
+
+<script>
+(function(){
+  const t=document.querySelector('[data-theme-toggle]'),r=document.documentElement;
+  let d=matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light';
+  r.setAttribute('data-theme',d);
+  const sun='<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>';
+  const moon='<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>';
+  if(t){t.innerHTML=d==='dark'?sun:moon;t.addEventListener('click',()=>{d=d==='dark'?'light':'dark';r.setAttribute('data-theme',d);t.innerHTML=d==='dark'?sun:moon;t.setAttribute('aria-label',d==='dark'?'切換淺色模式':'切換深色模式');});}
+})();
+const obs=new IntersectionObserver(e=>e.forEach(x=>{if(x.isIntersecting)x.target.classList.add('visible');}),{threshold:.05});
+document.querySelectorAll('.fade-up').forEach(el=>obs.observe(el));
+</script>
+</body>
+</html>
